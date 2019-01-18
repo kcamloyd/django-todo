@@ -23,12 +23,14 @@
                     <tr class="table-secondary">
                         <td>{{ item.item }}</td>
                         <td><a href="{% url 'undone' item.id %}">Mark Incomplete</a></td>
+                        <td><a href="{% url 'edit' item.id %}">Edit</a></td>
                         <td><a href="{% url 'delete' item.id %}">Delete</a></td>
                     </tr>
                 {% else %}
                     <tr>
                         <td>{{ item.item }}</td>
                         <td><a href="{% url 'done' item.id %}">Mark Completed</a></td>
+                        <td><a href="{% url 'edit' item.id %}">Edit</a></td>
                         <td><a href="{% url 'delete' item.id %}">Delete</a></td>
                     </tr>
                 {% endif %}
